@@ -37,6 +37,7 @@ class BiographyForm
                     ->label('Imagen principal')
                     ->image()
                     ->directory('biografias')
+                    ->disk('public')
                     ->visibility('public')
                     ->maxSize(2048)
                     ->imageEditor()
