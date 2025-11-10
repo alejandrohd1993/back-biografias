@@ -3,6 +3,8 @@
 namespace App\Filament\Resources\Biographies\Pages;
 
 use App\Filament\Resources\Biographies\BiographyResource;
+use App\Imports\MyBiografyImport;
+use EightyNine\ExcelImport\ExcelImportAction;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
@@ -13,6 +15,9 @@ class ListBiographies extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            ExcelImportAction::make()
+                ->color("success")
+                ->use(MyBiografyImport::class),
             CreateAction::make(),
         ];
     }
