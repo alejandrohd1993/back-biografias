@@ -28,6 +28,7 @@ class BiographiesTable
                     ->sortable(),
                 ImageColumn::make('image')
                     ->label('Imagen')
+                    ->disk('public')
                     ->square(),
                 IconColumn::make('featured')
                     ->label('Destacado')
